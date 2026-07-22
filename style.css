@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #191c29;
+    perspective: 1000px;
+}
+
+.container {
+    width: 450px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    transform-style: preserve-3d;
+    min-height: 55vh;
+    width: 35rem;
+    border-radius: 30px;
+    padding: 2rem 5rem;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+    transition: transform 0.1s ease;
+}
+
+.sneaker {
+    min-height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.sneaker img {
+    width: 20rem;
+    z-index: 2;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.5));
+}
+
+.circle {
+    width: 15rem;
+    height: 15rem;
+    background: linear-gradient(to right, rgba(245, 70, 66, 0.75), rgba(8, 83, 156, 0.75));
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+}
+
+.info {
+    text-align: center;
+    transform-style: preserve-3d;
+}
+
+.title {
+    font-size: 3rem;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    padding: 0.5rem 0;
+    color: #666;
+    font-weight: 400;
+    transition: transform 0.3s ease;
+}
+
+.sizes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.sizes button {
+    padding: 0.5rem 1.5rem;
+    background: none;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #585858;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.sizes button.active, .sizes button:hover {
+    background: #f54642;
+    color: white;
+}
+
+.purchase {
+    transition: transform 0.3s ease;
+}
+
+.purchase button {
+    width: 100%;
+    padding: 1rem 0;
+    background: #f54642;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0px 5px 15px rgba(245, 70, 66, 0.4);
+    transition: all 0.3s ease;
+}
+
+.purchase button:hover {
+    background: #e03c39;
+    box-shadow: 0px 8px 20px rgba(245, 70, 66, 0.6);
+}
